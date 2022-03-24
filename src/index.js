@@ -1,11 +1,15 @@
-const express = require("express");
+const express = require('express');
 
-const todosController = require("./controllers/todo.controllers");
+
+const productController = require("./controllers/product.controllers");
+
 
 const app = express();
 
-app.use(express.json());
+app.use(express.json())
 
-app.use("/todos", todosController);
+
+app.use("/products", productController);
+
 
 module.exports = app;
